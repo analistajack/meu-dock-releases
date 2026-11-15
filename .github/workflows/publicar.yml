@@ -1,0 +1,45 @@
+# Publica uma versão do Meu Dock a partir dos arquivos enviados para entrada/.
+# O instalador chega dividido em partes (o GitHub não aceita arquivos acima de 100 MB num commit);
+# aqui ele é remontado, conferido e publicado como release, que é de onde o dock se atualiza.
+name: Publicar versão
+
+on:
+  push:
+    branches: [main]
+    paths: ['entrada/versao.txt']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Montar, conferir e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cd entrada
+          version="$(tr -d '[:space:]' < versao.txt)"
+          exe="Meu-Dock-Setup-${version}.exe"
+          cat "${exe}".part-* > "${exe}"
+          sha256sum -c sha256.txt
+          if gh release view "v${version}" >/dev/null 2>&1; then
+            echo "A v${version} já está publicada."
+            exit 0
+          fi
+          gh release create "v${version}" --title "Meu Dock ${version}" --notes-file notas.md "${exe}" "${exe}.blockmap" latest.yml
+          echo "version=${version}" >> "$GITHUB_ENV"
+
+      - name: Limpar a entrada
+        if: env.version != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git rm -rq entrada
+          git commit -m "Publicada a v${version} [skip ci]"
+          git push
