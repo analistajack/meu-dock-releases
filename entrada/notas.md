@@ -1,0 +1,1 @@
+Bateria dos periféricos de dezenas de marcas (Logitech, Razer, SteelSeries, Corsair, HyperX, Glorious, VXE/ATK, Pulsar, Lamzu e outras) pelo Wireless Battery, que agora vem junto. O diagnóstico de bateria mostra o que ele leu.
