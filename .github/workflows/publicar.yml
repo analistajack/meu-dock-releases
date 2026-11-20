@@ -34,7 +34,7 @@ jobs:
             echo "A v${version} já está publicada."
             exit 0
           fi
-          gh release create "v${version}" --title "Meu Dock ${version}" --notes-file notas.md "${exe}" "${exe}.blockmap" latest.yml
+          gh release create "v${version}" --title "Maguinha Dock ${version}" --notes-file notas.md "${exe}" "${exe}.blockmap" latest.yml
           echo "version=${version}" >> "$GITHUB_ENV"
 
       - name: Limpar a entrada
