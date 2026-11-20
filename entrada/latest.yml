@@ -1,0 +1,9 @@
+version: 2.3.1
+files:
+  - url: Maguinha-Dock-Setup-2.3.1.exe
+    sha512: ZnoVz83SbShuuVV/gnuc/6DPS2AKAGydt0lZlghDDaRKlyNeXkTpzdDUhhJGkcAgL2CEWJcbX070F1FrH4IvZQ==
+    size: 114516299
+path: Maguinha-Dock-Setup-2.3.1.exe
+sha512: ZnoVz83SbShuuVV/gnuc/6DPS2AKAGydt0lZlghDDaRKlyNeXkTpzdDUhhJGkcAgL2CEWJcbX070F1FrH4IvZQ==
+releaseDate: '2026-11-20T14:13:39.112Z'
+maguinhaSignature: rgmkQNQvflJFcqVJ/48WG7BfrQ6riffCrvY9hpNBfItJ99AkJspWn21ZiUdE4R3CmFqJ+kFPWBQfoeGVuMABDQ==
