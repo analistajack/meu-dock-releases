@@ -1,1 +1,0 @@
-Correções de segurança: notícias e agenda não travam mais o dock, popups de login só nos endereços oficiais, permissões do Claude mais restritas, Maguinha usa o Claude Code sem ferramentas. Novo: lacre das atualizações (comandos criar chave, assinar, backup da chave).
