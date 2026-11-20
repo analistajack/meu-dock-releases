@@ -1,0 +1,1 @@
+Notícias de tech e IA de hora em hora (nova aba, fontes e palavras-chave nos ajustes, o Maguinha comenta). Mais leve: um relógio só para as tarefas periódicas, leitura do mouse mais lenta longe da pílula, módulos do centro carregados só quando abertos e o script do Windows sem compilar C# a cada início.
